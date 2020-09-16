@@ -35,8 +35,9 @@ class SavingsAccount{
             System.out.println("Sorry not enough balance");
         }
         else
-            balance-=amt;
+        { balance-=amt;
             System.out.println("The new balace = "+balance);
+        }
     } 
     void deposit(double amt)
     {
