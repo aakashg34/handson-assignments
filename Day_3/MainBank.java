@@ -4,7 +4,7 @@ public class MainBank {
         long acc2 = Long.parseLong(args[1]);
         double amt = Double.parseDouble(args[2]);
         //PART I
-       /*Account accountNO  = MainBank.getAccount(acc);
+       /*Account accountNO  = getAccount(acc);
        if(accountNO == null)
        {
         System.out.println("Sorry no account on this");
@@ -16,8 +16,8 @@ public class MainBank {
        }*/
         
        //PART II
-       Account account1 = MainBank.getAccount(acc1);
-       Account account2  = MainBank.getAccount(acc2);
+       Account account1 = getAccount(acc1);
+       Account account2  = getAccount(acc2);
        if(account1 == null || account2 == null)
        {
            System.out.println("Sorry you have entered wrong information");
