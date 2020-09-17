@@ -30,7 +30,7 @@
         {
             if(empl.address != null)
             {
-                System.out.println(empl.name+" has address as "+empl.address);
+                System.out.println(empl.name+" has address as "+empl.address.state+","+empl.address.city);
             }
         
         }
