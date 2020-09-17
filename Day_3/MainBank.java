@@ -1,8 +1,10 @@
 public class MainBank {
     public static void main(String[] args) {
-        long acc = Long.parseLong(args[0]);
-        double amt = Double.parseDouble(args[1]);
-       Account accountNO  = MainBank.getAccount(acc);
+        long acc1 = Long.parseLong(args[0]);
+        long acc2 = Long.parseLong(args[1]);
+        double amt = Double.parseDouble(args[2]);
+        //PART I
+       /*Account accountNO  = MainBank.getAccount(acc);
        if(accountNO == null)
        {
         System.out.println("Sorry no account on this");
@@ -11,17 +13,31 @@ public class MainBank {
            accountNO.accountInformation();
            accountNO.deposit(amt);
            accountNO.accountInformation(); 
+       }*/
+        
+       //PART II
+       Account account1 = MainBank.getAccount(acc1);
+       Account account2  = MainBank.getAccount(acc2);
+       if(account1 == null || account2 == null)
+       {
+           System.out.println("Sorry you have entered wrong information");
        }
-        
-        
-        //pass the accountNo and amount to deposit from CLA
-        //get the Account using the accountNo by calling getAccount(...)
-        // if accountNo is wrong show the error message and must not perform any below
-        // operation
-        
-        // show the account information before deposit
-        //deposit the amount to that particular Account
-        //show the account information after deposit
+       else
+        {
+            System.out.println("Depositor account information ");
+            account1.accountInformation();
+            System.out.println("To whom account information ");
+            account2.accountInformation();
+            System.out.println("----------------------");
+            account1.withdraw(amt);
+            account2.deposit(amt);
+            System.out.println("Depositor account information after Tx ");
+            account1.accountInformation();
+            System.out.println("To whom account information after Tx");
+            account2.accountInformation();
+
+        }
+
     }
 
     // pass the accountNO and get the Account from Accounts[] 

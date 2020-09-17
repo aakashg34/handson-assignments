@@ -28,6 +28,9 @@ public class Account {
         {
             System.out.println("Sorry you dont have enough balance");
         }
+        else{
+            balance-=amount;
+        }
         // System.out.println("withdraws amount from account");
     }
 
@@ -35,7 +38,7 @@ public class Account {
     */
     public void deposit(double amount) {
         balance+=amount;
-        System.out.println("Your updated balance is"+balance);
+      //  System.out.println("Your updated balance is"+balance);
         //  System.out.println("deposits amount to account");
     }
     public void accountInformation() {
